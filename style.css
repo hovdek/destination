@@ -1,0 +1,209 @@
+/* link for color palette: https://coolors.co/palette/012a4a-013a63-01497c-014f86-2a6f97-2c7da0-468faf-61a5c2-89c2d9-a9d6e5 */
+
+/* apply font and 0 margin to everything */
+*,
+*:before,
+*:after {
+    font-family: 'Hind Siliguri', sans-serif;
+    margin: 0;
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+/* clarify variables */
+/* em is relative to the font-size of its direct or nearest parent */
+/* rem is only relative to the html (root) font-size */
+:root {
+    --ff-light: 300;
+    --ff-regular: 400;
+    --ff-bold: 700;
+
+    --fs-xs: 0.75rem;
+    --fs-sm: 1.25rem;
+    --fs-med: 1.75rem;
+    --fs-lg: 2rem;
+    --fs-xl: 3.5rem;
+    --fs-xxl: 5rem;
+
+    --bg-clr: #edf6f9;
+    --text-clr: #01161e;
+    --primary-clr: #01497c;
+    --secondary-clr: #014f86;
+    --accent1-clr: #468faf;
+
+    --nav-clr: #013a63;
+    --nav-accent-clr: #012a4a;
+    --nav-accent-clr: #00192c;
+}
+
+body {
+    background-color: var(--bg-clr);
+}
+
+/* navigation */
+ul {
+    position: fixed; /* stays at top all through the page */
+    top: 0;
+    list-style-type: none; /* removes underline */
+    width: 100vw; 
+}
+
+li {
+    display: inline; /* sets each li inline with each other instead of block */
+    font-weight: var(--ff-bold);
+    margin-left: 30px;
+}
+
+.navbar {
+    background-color: rgba(1, 42, 74, 0.8); /* #012a4a with opacity */
+    padding: 10px;
+    z-index: 1;
+}
+
+.nav-bar-link {
+    color: var(--bg-clr);
+    text-decoration: none;
+    font-size: var(--fs-sm);
+    padding: 10px;
+    transition: 0.2s;
+}
+
+.nav-bar-link:hover {
+    background-color: rgba(0, 25, 44, 0.88);
+    transition: 0.2s;
+}
+
+.active {
+    background-color: rgba(0, 25, 44, 0.88);
+    padding-top: 15px;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+
+
+/* cover photo and title words */
+/* make the div position: relative */
+
+.top {
+    position: relative;
+    overflow: hidden;
+}
+
+/* position: absolute will keep the element positioned relative to their parent */
+.title {
+    font-family: 'Square Peg', 'Hind Siliguri', sans-serif;
+    position: absolute;
+    top: 50%;
+    padding: 10px 0 0 30px;
+    font-size: var(--fs-xxl);
+    background-color: rgba(70, 143, 175, 0.4); /* #468faf with opacity */
+    width: 100vw; /* makes the background go all the way through */
+}
+
+.backgroundimage {
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* cards and card pictures */
+/* setting grid areas */
+.card1 {
+    grid-area: card1;
+}
+.card2 {
+    grid-area: card2;
+}
+.card3 {
+    grid-area: card3;
+}
+
+.card-grid {
+    margin: auto;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "card1 card2 card3";
+    gap: 10px;
+}
+/* everything else for the cards */
+ol li {
+    font-size: var(--fs-xs);
+    font-weight: var(--ff-light);
+    margin-left: 25px;
+    display: block;
+}
+.card p {
+    font-size: var(--fs-sm);
+    margin-left: 20px;
+}
+
+.card {
+    box-shadow: 2px 2px 10px gray;
+    border-radius: 3px;
+    transition: 0.2s;
+    background-color: var(--bg-clr);
+    width: 400px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+.card-image {
+    width: 400px;
+}
+
+.free-cancellation {
+    color: green;
+    font-weight: var(--ff-bold);
+}
+
+
+
+
+
+
+/* */
+
+.small {
+    font-size: var(--fs-sm);
+}
+
+.medium {
+    font-size: var(--fs-med);
+}
+
+.large {
+    font-size: var(--fs-xxl);
+}
+
+/* footer */
+
+footer {
+    
+    color: var(--bg-clr);
+    background-color: var(--nav-accent-clr);
+    padding: 10px;
+}
+
+.extra-small {
+    font-size: var(--fs-xs);
+}
+
+/* other */
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--bg-clr);
+}
+
+/* media queries */
+
